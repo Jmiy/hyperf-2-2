@@ -1,0 +1,47 @@
+{
+    "name": "jmiy/hyperf-last",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.3",
+        "jmiy/hyperf-ding-notice": "dev-master"
+    },
+    "autoload":{
+        "psr-4":{
+            "Captainbi\\Hyperf\\":"src/"
+        },
+        "files": [
+            "src/functions_include.php",
+            "src/CaptainFunctions.php"
+        ]
+    },
+    "description": "",
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\": "tests"
+        }
+    },
+    "replace": {
+        "jmiy/hyperf-last": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 1 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Captainbi\\Hyperf\\ConfigProvider"
+        }
+    }
+}
