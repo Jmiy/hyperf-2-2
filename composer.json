@@ -5,6 +5,10 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.3",
+        "hyperf/async-queue": "~2.2.0",
+        "hyperf/signal": "^2.2",
+        "hyperf/snowflake": "^2.2",
+        "hyperf/constants": "~2.2.0",
         "jmiy/hyperf-ding-notice": "dev-master"
     },
     "autoload":{
